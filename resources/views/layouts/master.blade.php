@@ -19,7 +19,10 @@
                 <div class="head-right">
                     <div class="search-tool">
                         <form method="GET" action="">
-                            <input type="search" name="search" placeholder="Search here...">
+                            <div class="search-icon">
+                            <input type="text" name="search" placeholder="Search here...">
+                            <i class="bi bi-search"></i>
+                            </div>
                         </form>
                     </div>
                     @if (Auth::check())
@@ -41,7 +44,7 @@
                 </div>
             </div>
             <div class="head-menu">
-                <div><a href="#">Home</a></div>
+                <div><a href="{{ route ('home')}}">Home</a></div>
                 <div><a href="#">Movies</a></div>
                 <div><a href="#">TV Shows</a></div>
                 <div><a href="#">New & Popular</a></div>

@@ -84,3 +84,29 @@
 .btn-prev:hover, .btn-next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+.new-movie-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+.new-movie-list {
+    position: relative;
+    width: 100%;
+}
+.new-movie-list img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+.new-movie-list-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.605);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}

@@ -1,84 +1,84 @@
 [
     {
         "id": 1,
-        "image":"img/cenima/bo-tu-bao-thu.jpg",
+        "image":"img/cinema/bo-tu-bao-thu.jpg",
         "title":"Bộ Tứ Báo Thủ",
         "subtitle":"",
         "description": ""
     },
     {
         "id": 2,
-        "image":"img/cenima/cam-15790-thumb.webp",
+        "image":"img/cinema/cam-15790-thumb.webp",
         "title":"Cám",
         "subtitle":"The Sisters",
         "description": ""
     },
     {
         "id": 3,
-        "image":"img/cenima/dao-pho-va-piano-9214-thumb.webp",
+        "image":"img/cinema/dao-pho-va-piano-9214-thumb.webp",
         "title":"Đào Phở Và Piano",
         "subtitle":"Dao Pho and the Piano",
         "description": ""
     },
     {
         "id": 4,
-        "image":"img/cenima/dem-dinh-menh-16146-thumb.webp",
+        "image":"img/cinema/dem-dinh-menh-16146-thumb.webp",
         "title":"Đêm Định Mệnh",
         "subtitle":"Noctumal",
         "description": ""
     },
     {
         "id": 5,
-        "image":"img/cenima/den-am-hon.jpg",
+        "image":"img/cinema/den-am-hon.jpg",
         "title":"Đèn Âm Hồn",
         "subtitle":"The Soul Lamp",
         "description": ""
     },
     {
         "id": 6,
-        "image":"img/cenima/doraemon-nobita-va-mat-trang-phieu-luu-ky-8564-thumb.webp",
+        "image":"img/cinema/doraemon-nobita-va-mat-trang-phieu-luu-ky-8564-thumb.webp",
         "title":"Doraemon: Nobita Và Mặt Trăng Phiêu Lưu Ký",
         "subtitle":"Doraemon: Nobita and the Moon Adventure",
         "description": ""
     },
     {
         "id": 7,
-        "image":"img/cenima/ma-da-5814-thumb.webp",
+        "image":"img/cinema/ma-da-5814-thumb.webp",
         "title":"Ma Da",
         "subtitle":"Ghost",
         "description": ""
     },
     {
         "id": 8,
-        "image":"img/cenima/mai-12994-thumb.webp",
+        "image":"img/cinema/mai-12994-thumb.webp",
         "title":"Mai",
         "subtitle":"Mai",
         "description": ""
     },
     {
         "id": 9,
-        "image":"img/cenima/nha-gia-tien.jpg",
+        "image":"img/cinema/nha-gia-tien.jpg",
         "title":"Nhà Gia Tiên",
         "subtitle":"Nha Gia Tien",
         "description": ""
     },
     {
         "id": 10,
-        "image":"img/cenima/nu-hon-bac-ty.jpg",
+        "image":"img/cinema/nu-hon-bac-ty.jpg",
         "title":"Nụ Hôn Bạc Tỷ",
         "subtitle":"The Million Dollar Kiss",
         "description": ""
     },
     {
         "id": 11,
-        "image":"img/cenima/quy-nhap-trang.jpg",
+        "image":"img/cinema/quy-nhap-trang.jpg",
         "title":"Quỷ Nhập Tràng",
         "subtitle":"Quy Nhap Trang",
         "description": ""
     },
     {
         "id": 12,
-        "image":"img/cenima/sat-thu-vo-cung-cuc-hai-15787-thumb.webp",
+        "image":"img/cinema/sat-thu-vo-cung-cuc-hai-15787-thumb.webp",
         "title":"Sát Thủ Vô Cùng Cực Hài",
         "subtitle":"The Killer is Extremely Funny",
         "description": ""

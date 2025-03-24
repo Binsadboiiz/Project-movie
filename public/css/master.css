@@ -30,7 +30,7 @@
     margin-right: 17%;
 }
 
-.search-tool input[type="search"] {
+.search-tool input[type="text"] {
     padding: 5px 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -38,7 +38,7 @@
     font-size: 1em;
 }
 
-.search-tool input[type="search"]::placeholder {
+.search-tool input[type="text"]::placeholder {
     font-style: italic;
 }
 .head-menu {
@@ -96,3 +96,15 @@
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
+.search-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.search-icon i {
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
