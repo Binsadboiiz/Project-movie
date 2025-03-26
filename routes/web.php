@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\MovieController;
+use App\Http\Controllers\FavoriteController;
 
 Route::get('/', [PageController::class, 'index'])->name('home');
 Route::get('/movies', [PageController::class, 'showAllMovies'])->name('movie');
@@ -16,6 +17,9 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::post('/favorites/add', [FavoriteController::class, 'addToFavorites'])->name('favorites.add');
+Route::get('/mylist', [FavoriteController::class, 'myList'])->name('mylist.index');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin/movies', [MovieController::class, 'index'])->name('admin.movies.index');

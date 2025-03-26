@@ -4,11 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
         const newmovieContainer = document.querySelector('.new-movie-list-container');
         if (newmovieContainer) {
-            data.forEach(movie => {
+            const limitedMovies = data.slice(0, 9);
+            limitedMovies.forEach(movie => {
                 const movieDiv = document.createElement('div');
                 movieDiv.classList.add('new-movie-list');
                 movieDiv.innerHTML = `
-                    <a href="/movies/${movie.slug}">
+                    <a href="/movies/${movie.id}">
                         <img src="${movie.image}" alt="${movie.title}" style="cursor: pointer;">
                     </a>
                     <div class="new-movie-list-info">

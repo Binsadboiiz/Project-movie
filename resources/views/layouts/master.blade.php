@@ -18,9 +18,9 @@
                 </div>
                 <div class="head-right">
                     <div class="search-tool">
-                        <form method="GET" action="">
+                        <form method="GET" action="{{ route('movie')}}">
                             <div class="search-icon">
-                            <input type="text" name="search" placeholder="Search here...">
+                            <input type="text" name="search" placeholder="Search here..." value="{{ request('search') }}">
                             <i class="bi bi-search"></i>
                             </div>
                         </form>
@@ -46,9 +46,9 @@
             <div class="head-menu">
                 <div class="{{ Route::is('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></div>
                 <div class="{{ Route::is('movie') ? 'active' : '' }}"><a href="{{ route('movie')}}">Movies</a></div>
-                <div class="{{ Route::is('tvshows.index') ? 'active' : '' }}"><a href="#">TV Shows</a></div>
-                <div class="{{ Route::is('popular.index') ? 'active' : '' }}"><a href="#">New & Popular</a></div>
-                <div class="{{ Route::is('mylist.index') ? 'active' : '' }}"><a href="#">My List</a></div>
+                {{-- <div class="{{ Route::is('tvshows.index') ? 'active' : '' }}"><a href="#">TV Shows</a></div>
+                <div class="{{ Route::is('popular.index') ? 'active' : '' }}"><a href="#">New & Popular</a></div> --}}
+                <div class="{{ Route::is('mylist.index') ? 'active' : '' }}"><a href="{{ route('mylist.index') }}">My List</a></div>
                 @if (Auth::check() && Auth::user()->role === 'admin')
                     <div class="{{ Route::is('admin.movies.create') ? 'active' : '' }}"><a href="{{ route('admin.movies.create') }}">Add New Movie</a></div>
                     <div class="{{ Route::is('admin.movies.index') ? 'active' : '' }}"><a href="{{ route('admin.movies.index') }}">Manage Movies</a></div>
@@ -56,24 +56,19 @@
             </div>
         </header>
 
-        {{-- Đây là content --}}
         <main>
             @yield('content')
         </main>
 
-        {{-- Nhúng form đăng nhập và đăng ký --}}
         @include('partials.formlogin')
         @include('partials.formsignup')
 
-        {{-- Đây là footer --}}
         <footer>
 
         </footer>
 
-        {{-- Nhúng script --}}
         <script src="{{ asset('js/modals.js') }}"></script>
         <script>
-            // Hiển thị alert nếu có session flash messages
             @if (session('success'))
                 alert('{{ session('success') }}');
             @endif

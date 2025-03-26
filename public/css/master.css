@@ -55,6 +55,7 @@
     font-size: 0.8em;
     text-transform: uppercase;
     gap: 20px;
+    z-index: 1001;
 
 }
 .head-menu div a {

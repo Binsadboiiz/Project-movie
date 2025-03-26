@@ -13,6 +13,9 @@ class Movie extends Model
         'subtitle',
         'image',
         'description',
+        'director',
+        'country',
+        'release_year',
     ];
 
 }
