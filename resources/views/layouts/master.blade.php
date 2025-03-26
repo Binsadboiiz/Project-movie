@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/master.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/modals.css') }}">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-        <title>NETCHILL</title>
+        <title>NETCHILL - @yield('title', 'NETCHILL')</title>
     </head>
     <body data-logged-in="{{ Auth::check() ? 'true' : 'false' }}">
         {{-- Đây là Header --}}
@@ -44,11 +44,15 @@
                 </div>
             </div>
             <div class="head-menu">
-                <div><a href="{{ route ('home')}}">Home</a></div>
-                <div><a href="#">Movies</a></div>
-                <div><a href="#">TV Shows</a></div>
-                <div><a href="#">New & Popular</a></div>
-                <div><a href="#">My List</a></div>
+                <div class="{{ Route::is('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></div>
+                <div class="{{ Route::is('movies.index') ? 'active' : '' }}"><a href="#">Movies</a></div>
+                <div class="{{ Route::is('tvshows.index') ? 'active' : '' }}"><a href="#">TV Shows</a></div>
+                <div class="{{ Route::is('popular.index') ? 'active' : '' }}"><a href="#">New & Popular</a></div>
+                <div class="{{ Route::is('mylist.index') ? 'active' : '' }}"><a href="#">My List</a></div>
+                @if (Auth::check() && Auth::user()->role === 'admin')
+                    <div class="{{ Route::is('admin.movies.create') ? 'active' : '' }}"><a href="{{ route('admin.movies.create') }}">Add New Movie</a></div>
+                    <div class="{{ Route::is('admin.movies.index') ? 'active' : '' }}"><a href="{{ route('admin.movies.index') }}">Manage Movies</a></div>
+                @endif
             </div>
         </header>
 

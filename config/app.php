@@ -122,5 +122,13 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
+    // 'providers' => [
+    //     /*
+    //      * Laravel Framework Service Providers...
+    //      */
+    //     Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+    //     Illuminate\View\ViewServiceProvider::class,
+    //     App\Providers\AppServiceProvider::class,
+    // ],
 
 ];

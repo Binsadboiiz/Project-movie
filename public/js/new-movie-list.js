@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/data/new-movie-list.json')
+    fetch('/api/movies')
     .then(response => response.json())
     .then(data=> {
         const newmovieContainer = document.querySelector('.new-movie-list-container');
