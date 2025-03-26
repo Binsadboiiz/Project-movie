@@ -10,8 +10,13 @@ class MovieController extends Controller
 {
     public function index()
     {
-        $movies = \App\Models\Movie::all(); // Lấy tất cả phim
-        return response() -> json($movies);
+        $movies = Movie::all();
+        return view('admin.movies.index', compact('movies'));
+    }
+    public function apiIndex()
+    {
+        $movies = Movie::all();
+        return response()->json($movies);
     }
 
     public function create()

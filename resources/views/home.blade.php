@@ -2,8 +2,6 @@
 @section('title', 'Home')
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="{{ asset('js/slides.js') }}"></script>
 <script src="{{ asset('js/new-movie-list.js') }}"></script>
 @csrf

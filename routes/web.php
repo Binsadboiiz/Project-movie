@@ -6,8 +6,12 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\MovieController;
 
 Route::get('/', [PageController::class, 'index'])->name('home');
+Route::get('/movies', [PageController::class, 'showAllMovies'])->name('movie');
+Route::get('/movies/{id}', [PageController::class, 'showMovieDetail'])->name('movie.detail');
 
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::get('/api/movies', [MovieController::class, 'apiIndex'])->name('api.movies');
+
+Route::get('/login.form', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::post('/register', [AuthController::class, 'register'])->name('register');

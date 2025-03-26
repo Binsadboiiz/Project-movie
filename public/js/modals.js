@@ -19,7 +19,11 @@ function closeModal(modalId) {
         }
     }
 }
-
+document.addEventListener('DOMContentLoaded', function() {
+    // Ẩn tất cả modal khi trang load
+    closeModal('loginModal');
+    closeModal('registerModal');
+});
 window.onclick = function(event) {
     const loginModal = document.getElementById('loginModal');
     const registerModal = document.getElementById('registerModal');

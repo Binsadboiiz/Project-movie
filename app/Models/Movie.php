@@ -14,4 +14,5 @@ class Movie extends Model
         'image',
         'description',
     ];
+
 }

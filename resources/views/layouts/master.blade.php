@@ -45,7 +45,7 @@
             </div>
             <div class="head-menu">
                 <div class="{{ Route::is('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></div>
-                <div class="{{ Route::is('movies.index') ? 'active' : '' }}"><a href="#">Movies</a></div>
+                <div class="{{ Route::is('movie') ? 'active' : '' }}"><a href="{{ route('movie')}}">Movies</a></div>
                 <div class="{{ Route::is('tvshows.index') ? 'active' : '' }}"><a href="#">TV Shows</a></div>
                 <div class="{{ Route::is('popular.index') ? 'active' : '' }}"><a href="#">New & Popular</a></div>
                 <div class="{{ Route::is('mylist.index') ? 'active' : '' }}"><a href="#">My List</a></div>
