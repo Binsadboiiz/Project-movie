@@ -1,48 +1,9 @@
 @extends('layouts.master')
 @section('title', 'My List')
 @section('content')
-<style>
-    .my-list-container {
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 80%;
-    height: auto;
-    background-color: #1f1e1e;
-    }
-    .favorites {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-    }
-    .favorite-item {
-    position: relative;
-    width: 100%;
-    }
-    .my-list-conatainer img {
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-    }
-    .favorite-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.605);
-    color: white;
-    text-align: center;
-    z-index: 1;
-    }
-    .favorite-item img:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-    }
-</style>
+<link rel="stylesheet" href="{{ asset('css/mylist.css')}}">
 <div class="my-list-container">
-    <h1>My List</h1>
+    <h1 style="color: white">My List</h1>
     <div class="favorites">
         @forelse ($favorites as $favorite)
         <div class="favorite-item">

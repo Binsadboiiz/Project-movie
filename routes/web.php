@@ -9,6 +9,7 @@ use App\Http\Controllers\FavoriteController;
 Route::get('/', [PageController::class, 'index'])->name('home');
 Route::get('/movies', [PageController::class, 'showAllMovies'])->name('movie');
 Route::get('/movies/{id}', [PageController::class, 'showMovieDetail'])->name('movie.detail');
+Route::get('/donate', [PageController::class, 'donate'])->name('donate');
 
 Route::get('/api/movies', [MovieController::class, 'apiIndex'])->name('api.movies');
 

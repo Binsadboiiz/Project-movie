@@ -10,6 +10,9 @@ class PageController extends Controller
     {
         return view('home');
     }
+    public function donate() {
+        return view('donate');
+    }
     public function showAllMovies(Request $request)
     {
         $search = $request->input('search');

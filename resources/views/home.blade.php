@@ -17,7 +17,7 @@
         <br>
         <div class="content">
             <div class="new-movie">
-                <h1>New Movies</h1>
+                <h1 style="color: white">New Movies</h1>
                 <div class="new-movie-list-container"></div>
             </div>
         </div>

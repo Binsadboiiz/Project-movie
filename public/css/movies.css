@@ -6,6 +6,9 @@
     background-color: #1f1e1e;
     overflow: hidden;
 }
+.movies-container h1 {
+    color: white;
+}
 .movies-list-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

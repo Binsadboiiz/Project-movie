@@ -63,8 +63,27 @@
         @include('partials.formlogin')
         @include('partials.formsignup')
 
-        <footer>
-
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="ft-col ft-col-logo">
+                    <div class="ft-col-header">
+                        <div class="ft-col-img">
+                            <a href="{{ route('home')}}"><img src="{{ asset('img/logo/netchill.jpg') }}" alt="NETCHILL Logo"></a>
+                        </div>
+                        <h1>NETCHILL</h1>
+                    </div>
+                    <p>NETCHILL – Phim hay cả rổ - Trang xem phim online chất lượng cao miễn phí Vietsub, thuyết minh, lồng tiếng full HD. Kho phim mới khổng lồ, phim chiếu rạp, phim bộ, phim lẻ từ nhiều quốc gia như Việt Nam, Hàn Quốc, Trung Quốc, Thái Lan, Nhật Bản, Âu Mỹ… đa dạng thể loại. Khám phá nền tảng phim trực tuyến hay nhất 2025 chất lượng 4K!</p>
+                </div>
+                <div class="ft-col ft-col-contact">
+                    <h1>Contact Me</h1>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/phu.cuong.8526" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/ngphcng?igsh=MXdoaTgycjF4N2dibQ==" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.threads.net/@ngphcng" target="_blank"><i class="bi bi-threads"></i></a>
+                    </div>
+                </div>
+                <div class="ft-col ft-col-donate"><a href="{{ route('donate')}}">Donate❤️</a></div>
+            </div>
         </footer>
 
         <script src="{{ asset('js/modals.js') }}"></script>
