@@ -19,6 +19,7 @@
             <input type="hidden" name="movie_id" value="{{ $movie->id }}">
             <button type="button" style="background-color: blue;"><i class="bi bi-bookmark-fill"></i>Thêm vào yêu thích</button>
         </form>
+
     </div>
 </div>
 @endsection

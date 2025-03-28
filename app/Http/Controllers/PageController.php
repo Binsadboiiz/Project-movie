@@ -20,8 +20,8 @@ class PageController extends Controller
             return $query->where('title', 'like', "%{$search}%")
                         ->orWhere('subtitle', 'like', "%{$search}%")
                         ->orWhere('description', 'like', "%{$search}%");
-        })->get();
-
+        })->paginate(12);
+        $movies->appends(['search' => $search]);
         return view('movie', compact('movies'));
     }
     public function showMovieDetail($id)

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
         const newmovieContainer = document.querySelector('.new-movie-list-container');
         if (newmovieContainer) {
-            const limitedMovies = data.slice(0, 9);
+            const limitedMovies = data.slice(0, 8);
             limitedMovies.forEach(movie => {
                 const movieDiv = document.createElement('div');
                 movieDiv.classList.add('new-movie-list');
