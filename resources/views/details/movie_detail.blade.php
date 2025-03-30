@@ -14,11 +14,11 @@
         <p><strong>Release Year:</strong> {{ $movie->release_year ?? 'Unknown' }}</p>
         <p><strong>Categories:</strong> {{ $movie->categories->pluck('name')->implode(', ') ?: 'No categories assigned' }}</p>
         <p><strong>Description:</strong> {{ $movie->description ?? 'No description available.' }}</p>
-        <button type="button" id="playmovie" style="background-color: red;"><i class="bi bi-play-fill"></i>Xem Phim</button><br></br>
+        <button type="submit" id="playmovie" style="background-color: red;"><i class="bi bi-play-fill"></i>Xem Phim</button><br></br>
         <form method="POST" action="{{ route('favorites.add') }}">
             @csrf
             <input type="hidden" name="movie_id" value="{{ $movie->id }}">
-            <button type="button" id="addlist" style="background-color: blue;"><i class="bi bi-bookmark-fill"></i>Thêm vào yêu thích</button>
+            <button type="submit" id="addlist" style="background-color: blue;"><i class="bi bi-bookmark-fill"></i>Thêm vào yêu thích</button>
         </form>
 
     </div>
