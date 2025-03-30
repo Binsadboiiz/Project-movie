@@ -85,3 +85,20 @@
     background-color: rgba(68, 67, 67, 0.433);
     z-index: 15;
 }
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+        margin: 5% auto;
+    }
+    .modal-content h2 {
+        font-size: 20px;
+    }
+    .modal-content form input {
+        font-size: 14px;
+    }
+    .modal-content form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

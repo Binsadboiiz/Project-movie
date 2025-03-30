@@ -20,7 +20,6 @@
             <label for="image" class="admin-form-label">Image URL</label>
             <input type="url" name="image" id="image" class="admin-form-control" required>
         </div>
-
         <div class="admin-form-group">
             <label for="director" class="admin-form-label">Director</label>
             <input type="text" name="director" id="director" class="admin-form-control">
@@ -36,6 +35,15 @@
         <div class="admin-form-group">
             <label for="description" class="admin-form-label">Description</label>
             <textarea name="description" id="description" class="admin-form-control"></textarea>
+        </div>
+        <div class="admin-form-group">
+            <label for="categories" class="admin-form-label">Categories</label>
+            <select name="categories[]" id="categories" class="admin-form-control" multiple>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+            <small class="form-text text-muted">Hold Ctrl (Windows) or Cmd (Mac) to select multiple categories.</small>
         </div>
         <button type="submit" class="admin-btn">Add Movie</button>
     </form>

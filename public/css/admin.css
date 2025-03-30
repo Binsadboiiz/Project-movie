@@ -104,3 +104,25 @@
 .admin-table tr:hover {
     background-color: #e9ecef;
 }
+@media (max-width: 480px) {
+    .admin-container {
+        max-width: 100%;
+        padding: 10px;
+        margin: 20px auto;
+    }
+    .admin-title {
+        font-size: 20px;
+    }
+    .admin-form-control {
+        font-size: 12px;
+        padding: 8px;
+    }
+    .admin-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    .admin-table th, .admin-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

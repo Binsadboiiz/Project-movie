@@ -37,6 +37,17 @@
             <label for="description" class="admin-form-label">Description</label>
             <textarea name="description" id="description" class="admin-form-control">{{ $movie->description }}</textarea>
         </div>
+        <div class="admin-form-group">
+            <label for="categories" class="admin-form-label">Categories</label>
+            <select name="categories[]" id="categories" class="admin-form-control" multiple>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}" {{ $movie->categories->contains($category->id) ? 'selected' : '' }}>
+                        {{ $category->name }}
+                    </option>
+                @endforeach
+            </select>
+            <small class="form-text text-muted">Hold Ctrl (Windows) or Cmd (Mac) to select multiple categories.</small>
+        </div>
         <button type="submit" class="admin-btn">Update Movie</button>
     </form>
 </div>

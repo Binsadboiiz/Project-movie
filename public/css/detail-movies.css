@@ -33,7 +33,7 @@
 .back-link:hover {
     text-decoration: underline;
 }
-button {
+#playmovie, #addlist {
     padding: 10px 20px;
     color: white;
     border: none;
@@ -47,4 +47,21 @@ button {
 i {
     color: white;
     font-size: 1.3rem;
+}
+@media (max-width: 480px) {
+    .movie-detail-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .movie-detail-container img {
+        width: 100%;
+        margin-right: 0;
+    }
+    .movie-detail-info {
+        width: 100%;
+    }
+    #playmovie, #addlist {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
 }

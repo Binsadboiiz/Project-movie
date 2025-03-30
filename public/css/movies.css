@@ -67,3 +67,36 @@
 .pagination .page-link:hover {
     background-color: #555;
 }
+.categories-filter {
+    margin-bottom: 30px;
+    text-align: left;
+}
+.filter-select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    width: 200px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+@media (max-width: 480px) {
+    .movies-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .movies-list-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    .pagination .page-link {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    .filter-select {
+        width: 100%;
+        font-size: 14px;
+    }
+}

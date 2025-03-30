@@ -10,7 +10,7 @@ class MovieController extends Controller
 {
     public function index()
     {
-        $movies = Movie::all();
+        $movies = Movie::with('categories')->get();
         return view('admin.movies.index', compact('movies'));
     }
     public function apiIndex()
@@ -21,7 +21,8 @@ class MovieController extends Controller
 
     public function create()
     {
-        return view('admin.movies.create');
+        $categories = \App\Models\Category::all();
+        return view('admin.movies.create', compact('categories'));
     }
 
     public function store(Request $request)
@@ -31,16 +32,22 @@ class MovieController extends Controller
             'subtitle' => 'nullable|string|max:255',
             'image' => 'required|string',
             'description' => 'nullable|string',
+            'director' => 'nullable|string|max:255',
+            'country' => 'nullable|string|max:255',
+            'release_year' => 'nullable|integer|min:1900|max:2100',
+            'categories' => 'nullable|array',
         ]);
 
-        Movie::create($request->all());
+        $movie = Movie::create($request->only('title', 'subtitle', 'image', 'description', 'director', 'country', 'release_year'));
+        $movie->categories()->sync($request->input('categories', []));
 
         return redirect()->route('admin.movies.index')->with('success', 'Movie added successfully.');
     }
 
     public function edit(Movie $movie)
     {
-        return view('admin.movies.edit', compact('movie'));
+        $categories = \App\Models\Category::all();
+        return view('admin.movies.edit', compact('movie', 'categories'));
     }
 
     public function update(Request $request, Movie $movie)
@@ -50,9 +57,14 @@ class MovieController extends Controller
             'subtitle' => 'nullable|string|max:255',
             'image' => 'required|string',
             'description' => 'nullable|string',
+            'director' => 'nullable|string|max:255',
+            'country' => 'nullable|string|max:255',
+            'release_year' => 'nullable|integer|min:1900|max:2100',
+            'categories' => 'nullable|array',
         ]);
 
-        $movie->update($request->all()); // Cập nhật phim
+        $movie->update($request->only('title', 'subtitle', 'image', 'description', 'director', 'country', 'release_year'));
+        $movie->categories()->sync($request->input('categories', []));
 
         return redirect()->route('admin.movies.index')->with('success', 'Movie updated successfully.');
     }

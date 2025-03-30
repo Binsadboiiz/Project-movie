@@ -16,17 +16,26 @@ class PageController extends Controller
     public function showAllMovies(Request $request)
     {
         $search = $request->input('search');
-        $movies = \App\Models\Movie::when($search, function ($query, $search) {
-            return $query->where('title', 'like', "%{$search}%")
-                        ->orWhere('subtitle', 'like', "%{$search}%")
-                        ->orWhere('description', 'like', "%{$search}%");
-        })->paginate(12);
-        $movies->appends(['search' => $search]);
+        $category = $request->input('category');
+
+        $movies = \App\Models\Movie::with('categories')
+            ->when($search, function ($query, $search) {
+                return $query->where('title', 'like', "%{$search}%")
+                            ->orWhere('subtitle', 'like', "%{$search}%");
+            })
+            ->when($category, function ($query, $category) {
+                return $query->whereHas('categories', function ($q) use ($category) {
+                    $q->where('categories.id', $category);
+                });
+            })
+            ->paginate(12);
+
+        $movies->appends(['search' => $search, 'category' => $category]);
         return view('movie', compact('movies'));
     }
     public function showMovieDetail($id)
     {
-        $movie = \App\Models\Movie::findOrFail($id);
+        $movie = \App\Models\Movie::with('categories')->findOrFail($id);
         return view('details.movie_detail', compact('movie'));
     }
 }

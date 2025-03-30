@@ -12,6 +12,7 @@
             <tr>
                 <th>ID</th>
                 <th>Title</th>
+                <th>Categories</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@
                 <tr>
                     <td>{{ $movie->id }}</td>
                     <td>{{ $movie->title }}</td>
+                    <td>{{ $movie->categories->pluck('name')->implode(', ') }}</td>
                     <td>
                         <a href="{{ route('admin.movies.edit', $movie->id) }}" class="admin-btn admin-btn-warning">Edit</a>
                         <form action="{{ route('admin.movies.destroy', $movie->id) }}" method="POST" style="display:inline-block;">

@@ -17,5 +17,8 @@ class Movie extends Model
         'country',
         'release_year',
     ];
-
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'category_movie');
+    }
 }
